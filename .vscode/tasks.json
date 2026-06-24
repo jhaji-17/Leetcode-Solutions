@@ -4,7 +4,7 @@
     {
       "label": "Compile and run C++",
       "type": "shell",
-      "command": "cp \"${file}\" \"${workspaceFolder}/jspwTest.cpp\" && g++ -std=c++17 -Wall -DLOCAL \"${workspaceFolder}/jspwTest.cpp\" -o \"${workspaceFolder}/jspwTest\" && \"${workspaceFolder}/jspwTest\" < \"${workspaceFolder}/input.txt\" > \"${workspaceFolder}/output.txt\" 2> \"${workspaceFolder}/debug.txt\" && rm \"${workspaceFolder}/jspwTest\" \"${workspaceFolder}/jspwTest.cpp\"",
+      "command": "cp \"${file}\" \"${workspaceFolder}/jspwTest.cpp\" && g++ -std=c++17 -Wall -DLOCAL -I\"${workspaceFolder}\" \"${workspaceFolder}/jspwTest.cpp\" -o \"${workspaceFolder}/jspwTest\" && \"${workspaceFolder}/jspwTest\" < \"${workspaceFolder}/input.txt\" > \"${workspaceFolder}/output.txt\" 2> \"${workspaceFolder}/debug.txt\" && rm \"${workspaceFolder}/jspwTest\" \"${workspaceFolder}/jspwTest.cpp\"",
       "presentation": {
         "reveal": "never"
       },
@@ -14,10 +14,17 @@
       },
       "problemMatcher": {
         "owner": "cpp",
-        "fileLocation": [ "relative", "${workspaceRoot}" ],
+        "fileLocation": [
+          "relative",
+          "${workspaceRoot}"
+        ],
         "pattern": {
           "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
-          "file": 1, "line": 2, "column": 3, "severity": 4, "message": 5
+          "file": 1,
+          "line": 2,
+          "column": 3,
+          "severity": 4,
+          "message": 5
         }
       }
     }
