@@ -45,7 +45,7 @@ void pin(const vi &a) {
 
 // --- Main Solve Function ---
 void solve() {
-    cout<<"Hello";
+    cout<<"Hello world";
 }
 
 // --- Main Function ---
